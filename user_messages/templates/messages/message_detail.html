@@ -1,0 +1,13 @@
+<!-- proyecto_final/templates/user_messages/message_detail.html -->
+{% extends 'base.html' %}
+
+{% block title %}Detalle de Mensaje{% endblock %}
+
+{% block content %}
+    <h1>Detalle de Mensaje</h1>
+    <h1>{{ message.subject }}</h1>
+    <p><strong>De:</strong> {{ message.sender.username }}</p>
+    <p><strong>Fecha:</strong> {{ message.timestamp }}</p>
+    <p>{{ message.body }}</p>
+    <a href="{% url 'inbox' %}">Volver a la bandeja de entrada</a>
+{% endblock %}
